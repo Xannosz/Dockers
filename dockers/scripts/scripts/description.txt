@@ -1,0 +1,2 @@
+first setup as su
+second setupGirrepos as user

@@ -1,0 +1,1 @@
+docker run -v /var/lib/docker/containers:/var/lib/docker/containers -v /persistante:/persistante -it blueQueen
