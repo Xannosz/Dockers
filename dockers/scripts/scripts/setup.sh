@@ -1,5 +1,6 @@
 apt update
-apt install git curl
-git --version
+apt install curl
 ./installDocker.sh
+mkdir /persist
+chmod 777 /persist
 reboot

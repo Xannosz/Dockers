@@ -1,1 +1,1 @@
-docker run -v /var/lib/docker/containers:/var/lib/docker/containers -v /persistante:/persistante -it blueQueen
+docker run -v /var/lib/docker/containers:/var/lib/docker/containers -v /persist:/persist -p 3500:8888 xannosz/bluequeen:latest &
