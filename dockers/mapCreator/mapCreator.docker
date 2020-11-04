@@ -1,0 +1,7 @@
+FROM ubuntu:latest
+RUN apt-get update
+RUN apt-get install python3 -y
+COPY ./packages /packages
+COPY ./scripts /scripts
+#RUN pip install distutils
+#RUN python3 /packages/MinecraftOverviewer/setup.py build
