@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 RUN apt-get update
 RUN apt-get install zip -y
-COPY ./scripts /scripts
-COPY ./target /target
-COPY ./source /source
+#COPY ./target /target
+#COPY ./source /source
+CMD ls -td1 /target/* | tail -n +4 | xargs rm -fr && zip -r "/target/server-backup-$(date +"%Y-%m-%d").zip" /source
