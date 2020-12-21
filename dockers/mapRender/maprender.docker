@@ -1,0 +1,7 @@
+FROM mide/minecraft-overviewer:latest
+
+ENV MINECRAFT_VERSION="1.16.2"
+
+#COPY ./world /home/minecraft/server/world
+
+# output: /home/minecraft/render
