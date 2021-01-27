@@ -1,0 +1,3 @@
+FROM lwieske/java-8:latest
+COPY ./running /running
+CMD cd /running && ./run.sh
