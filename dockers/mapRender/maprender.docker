@@ -1,7 +1,11 @@
 FROM mide/minecraft-overviewer:latest
 
-ENV MINECRAFT_VERSION="1.16.2"
+ENV MINECRAFT_VERSION="1.16.5"
+
+COPY ./config/config.py /home/minecraft/config.py
 
 #COPY ./world /home/minecraft/server/world
+#output: /home/minecraft/render
+#input: /home/minecraft/server
 
-# output: /home/minecraft/render
+#CMD ["bash","/home/minecraft/entrypoint.sh","--genpoi","--verbose","--forcerender"]
