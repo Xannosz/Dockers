@@ -23,6 +23,7 @@ def signFilter(poi):
             return os.environ['RENDER_SIGNS_JOINER'].join(lines)
 
 worlds["Daedalus"] = "/home/minecraft/server/world"
+worlds["Daedalus Faraway Lands"] = "/home/minecraft/server/world"
 worlds["Daedalus Nether"] = "/home/minecraft/server/world_nether"
 worlds["Daedalus End"] = "/home/minecraft/server/world_the_end"
 
@@ -33,95 +34,87 @@ worlds["Cerberus End"] = "/home/minecraft/spigot/world_the_end"
 markers = [
     dict(name="Player", filterFunction=playerIcons, checked=True),
     dict(name="Sign", filterFunction=signFilter, checked=True)
-    #dict(name="Towns", filterFunction=townFilter, icon="icons/marker_town.png", checked=True)
 ]
 
 ## Daedalus
-renders["Daedalus day"] = {
+renders["Daedalus_day"] = {
     "world": "Daedalus",
     "title": "Daedalus Day",
     "rendermode": "smooth_lighting",
     "dimension": "overworld",
-    "crop": [(-30000, -30000, 30000, 30000),(29970000, 29970000, 30000000, 30000000)],
+    "crop": (-30000, -30000, 30000, 30000),
     "markers": markers
 }
-renders["Daedalus overlay_biome"] = {
-    "world": "Daedalus",
-    "title": "Biome Coloring Overlay",
-    "rendermode": [ClearBase(), BiomeOverlay()],
-    "dimension": "overworld",
-    "crop": [(-30000, -30000, 30000, 30000),(29970000, 29970000, 30000000, 30000000)],
-    "overlay": ["Daedalus day"]
-}
-renders["Daedalus overlay_mobs"] = {
-    "world": "Daedalus",
-    "title": "Mob Spawnable Areas Overlay",
-    "rendermode": [ClearBase(), SpawnOverlay()],
-    "dimension": "overworld",
-    "crop": [(-30000, -30000, 30000, 30000),(29970000, 29970000, 30000000, 30000000)],
-    "overlay": ["Daedalus day"]
-}
-renders["Daedalus overlay_slime"] = {
-    "world": "Daedalus",
-    "title": "Slime Chunk Overlay",
-    "rendermode": [ClearBase(), SlimeOverlay()],
-    "dimension": "overworld",
-    "crop": [(-30000, -30000, 30000, 30000),(29970000, 29970000, 30000000, 30000000)],
-    "overlay": ["Daedalus day"]
-}
-renders["Daedalus night"] = {
+renders["Daedalus_night"] = {
     "world": "Daedalus",
     "title": "Daedalus Night",
     "rendermode": "smooth_night",
     "dimension": "overworld",
-    "crop": [(-30000, -30000, 30000, 30000),(29970000, 29970000, 30000000, 30000000)],
+    "crop": (-30000, -30000, 30000, 30000),
     "markers": markers
 }
-renders["Daedalus cave"] = {
+renders["Daedalus_cave"] = {
     "world": "Daedalus",
     "title": "Daedalus Cave",
     "rendermode": "cave",
     "dimension": "overworld",
-    "crop": [(-30000, -30000, 30000, 30000),(29970000, 29970000, 30000000, 30000000)],
+    "crop": (-30000, -30000, 30000, 30000),
     "markers": markers
 }
 
-renders["Daedalus nether light"] = {
+renders["Daedalus_faraway_lands_day"] = {
+    "world": "Daedalus Faraway Lands",
+    "title": "Daedalus Faraway Lands Day",
+    "rendermode": "smooth_lighting",
+    "dimension": "overworld",
+    "crop": (29970000, 29970000, 30000000, 30000000),
+    "markers": markers
+}
+renders["Daedalus_faraway_lands_night"] = {
+    "world": "Daedalus Faraway Lands",
+    "title": "Daedalus Faraway Lands Night",
+    "rendermode": "smooth_night",
+    "dimension": "overworld",
+    "crop": (29970000, 29970000, 30000000, 30000000),
+    "markers": markers
+}
+renders["Daedalus_faraway_lands_cave"] = {
+    "world": "Daedalus Faraway Lands",
+    "title": "Daedalus Faraway Lands Cave",
+    "rendermode": "cave",
+    "dimension": "overworld",
+    "crop": (29970000, 29970000, 30000000, 30000000),
+    "markers": markers
+}
+
+renders["Daedalus_nether_light"] = {
     "world": "Daedalus Nether",
     "title": "Daedalus Nether Light",
     "rendermode": "nether",
     "dimension": "nether",
-    "crop": [(-30000, -30000, 30000, 30000),(29970000, 29970000, 30000000, 30000000)],
+    "crop": (-30000, -30000, 30000, 30000),
     "markers": markers
 }
-renders["Daedalus nether dark"] = {
+renders["Daedalus_nether_dark"] = {
     "world": "Daedalus Nether",
     "title": "Daedalus Nether Dark",
     "rendermode": "nether_smooth_lighting",
     "dimension": "nether",
-    "crop": [(-30000, -30000, 30000, 30000),(29970000, 29970000, 30000000, 30000000)],
+    "crop": (-30000, -30000, 30000, 30000),
     "markers": markers
 }
-renders["Daedalus overlay_biome nether"] = {
-    "world": "Daedalus Nether",
-    "title": "Biome Coloring Overlay",
-    "rendermode": [ClearBase(), BiomeOverlay()],
-    "dimension": "nether",
-    "crop": [(-30000, -30000, 30000, 30000),(29970000, 29970000, 30000000, 30000000)],
-    "overlay": ["Daedalus nether light"]
-}
 
-renders["Daedalus End"] = {
+renders["Daedalus_end"] = {
     "world": "Daedalus End",
     "title": "Daedalus End",
     "rendermode": [Base(), EdgeLines(), SmoothLighting(strength=0.5)],
     "dimension": "end",
-    "crop": [(-30000, -30000, 30000, 30000),(29970000, 29970000, 30000000, 30000000)],
+    "crop": (-30000, -30000, 30000, 30000),
     "markers": markers
 }
 
 ## Cerberus
-renders["Cerberus day"] = {
+renders["Cerberus_day"] = {
     "world": "Cerberus",
     "title": "Cerberus Day",
     "rendermode": "smooth_lighting",
@@ -129,31 +122,7 @@ renders["Cerberus day"] = {
     "crop": (-30000, -30000, 30000, 30000),
     "markers": markers
 }
-renders["Cerberus overlay_biome"] = {
-    "world": "Cerberus",
-    "title": "Biome Coloring Overlay",
-    "rendermode": [ClearBase(), BiomeOverlay()],
-    "dimension": "overworld",
-    "crop": (-30000, -30000, 30000, 30000),
-    "overlay": ["Cerberus day"]
-}
-renders["Cerberus overlay_mobs"] = {
-    "world": "Cerberus",
-    "title": "Mob Spawnable Areas Overlay",
-    "rendermode": [ClearBase(), SpawnOverlay()],
-    "dimension": "overworld",
-    "crop": (-30000, -30000, 30000, 30000),
-    "overlay": ["Cerberus day"]
-}
-renders["Cerberus overlay_slime"] = {
-    "world": "Cerberus",
-    "title": "Slime Chunk Overlay",
-    "rendermode": [ClearBase(), SlimeOverlay()],
-    "dimension": "overworld",
-    "crop": (-30000, -30000, 30000, 30000),
-    "overlay": ["Cerberus day"]
-}
-renders["Cerberus night"] = {
+renders["Cerberus_night"] = {
     "world": "Cerberus",
     "title": "Cerberus Night",
     "rendermode": "smooth_night",
@@ -161,7 +130,7 @@ renders["Cerberus night"] = {
     "crop": (-30000, -30000, 30000, 30000),
     "markers": markers
 }
-renders["Cerberus cave"] = {
+renders["Cerberus_cave"] = {
     "world": "Cerberus",
     "title": "Cerberus Cave",
     "rendermode": "cave",
@@ -170,7 +139,7 @@ renders["Cerberus cave"] = {
     "markers": markers
 }
 
-renders["Cerberus nether light"] = {
+renders["Cerberus_nether_light"] = {
     "world": "Cerberus Nether",
     "title": "Cerberus Nether Light",
     "rendermode": "nether",
@@ -178,7 +147,7 @@ renders["Cerberus nether light"] = {
     "crop": (-30000, -30000, 30000, 30000),
     "markers": markers
 }
-renders["Cerberus nether dark"] = {
+renders["Cerberus_nether_dark"] = {
     "world": "Cerberus Nether",
     "title": "Cerberus Nether Dark",
     "rendermode": "nether_smooth_lighting",
@@ -186,16 +155,8 @@ renders["Cerberus nether dark"] = {
     "crop": (-30000, -30000, 30000, 30000),
     "markers": markers
 }
-renders["Cerberus overlay_biome nether"] = {
-    "world": "Cerberus Nether",
-    "title": "Biome Coloring Overlay",
-    "rendermode": [ClearBase(), BiomeOverlay()],
-    "dimension": "nether",
-    "crop": (-30000, -30000, 30000, 30000),
-    "overlay": ["Cerberus nether light"]
-}
 
-renders["Cerberus End"] = {
+renders["Cerberus_end"] = {
     "world": "Cerberus End",
     "title": "Cerberus End",
     "rendermode": [Base(), EdgeLines(), SmoothLighting(strength=0.5)],
