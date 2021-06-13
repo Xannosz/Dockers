@@ -24,8 +24,8 @@ def signFilter(poi):
 
 worlds["Daedalus"] = "/home/minecraft/server/world"
 worlds["Daedalus Faraway Lands"] = "/home/minecraft/server/world"
-worlds["Daedalus Nether"] = "/home/minecraft/server/world_nether"
-worlds["Daedalus End"] = "/home/minecraft/server/world_the_end"
+worlds["Daedalus Nether"] = "/home/minecraft/server/world"
+worlds["Daedalus End"] = "/home/minecraft/server/world"
 
 worlds["Cerberus"] = "/home/minecraft/spigot/world"
 worlds["Cerberus Nether"] = "/home/minecraft/spigot/world_nether"
