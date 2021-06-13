@@ -1,0 +1,7 @@
+FROM ubuntu:latest
+COPY ./lib /lib
+RUN apt update
+RUN apt-get install -y libasound2
+RUN apt install /lib/jdk-16.0.1.deb -y
+ENV PATH="/lib/jvm/jdk-16.0.1/bin:${PATH}"
+#CMD bash
