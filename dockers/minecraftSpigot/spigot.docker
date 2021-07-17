@@ -1,3 +1,3 @@
-FROM lwieske/java-8:latest
+FROM xannosz/java16:latest
 COPY ./spigot /spigot
 CMD cd spigot/map && java -Xmx1024M -Xms1024M -Dfile.encoding=UTF-8 -jar ../spigot.jar nogui
