@@ -1,0 +1,6 @@
+FROM ubuntu:latest
+COPY ./lib /lib
+RUN apt update
+RUN apt install /lib/jdk-17.0.1.deb -y
+ENV PATH="/lib/jvm/jdk-17/bin:${PATH}"
+#CMD bash
