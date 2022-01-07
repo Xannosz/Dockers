@@ -1,3 +1,9 @@
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -30,7 +36,7 @@ else
     color_prompt=
 fi
 
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 alias ls='ls --color=auto'
 alias dir='dir --color=auto'
@@ -42,6 +48,12 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+alias cmd='cmd.exe'
+alias pws='powershell.exe'
+alias pwsi='powershell_ise.exe'
+alias home='cd /mnt/c/Users/kissa'
+alias open='explorer.exe .'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
