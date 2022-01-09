@@ -1,9 +1,9 @@
-$ docker export -o wsl.tar.gz wsl
+$ docker export -o osb.tar.gz wsl
 
 # wsl -l -v
 
 % létezzen a mappa
 
-# wsl --import osbandi C:\wsldistros\osbandi .\wsl.tar.gz --version 2
+# wsl --import osbandi C:\wsldistros\osbandi .\osb.tar.gz --version 2
 
 # wsl -d osbandi

@@ -23,7 +23,6 @@ else
    PS1='\[\033[01;31m\]\u\[\033[00m\]:\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 fi
 
-
 alias ls='ls --color=auto'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
@@ -38,8 +37,10 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias cmd='cmd.exe'
 alias pws='powershell.exe'
 alias pwsi='powershell_ise.exe'
-alias home='cd /mnt/c/Users'
+alias home='cd /c/Users'
 alias open='explorer.exe .'
+
+alias wttr='curl wttr.in'
 
 # enable programmable completion features
 if ! shopt -oq posix; then
