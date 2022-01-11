@@ -11,8 +11,8 @@ ENV LANG en_US.UTF-8
 RUN tar xf /install/btop.tbz -C /usr/local bin/btop
 
 RUN apt update
-RUN apt -y install dialog htop neofetch ncdu wget curl ssh telnet vim nano
 
+RUN apt -y install dialog ncdu wget curl ssh telnet nano sudo
 RUN apt -y install mc
-
 RUN apt -y install irssi
+
