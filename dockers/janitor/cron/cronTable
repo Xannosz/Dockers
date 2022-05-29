@@ -1,0 +1,2 @@
+5 */1 * * * /script/hourly.sh
+35 4 * * 2 /script/weekly.sh
