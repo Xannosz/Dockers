@@ -1,1 +1,1 @@
-/script/runner.sh weekly >> /logs/cron.log 2>&1
+/script/runner.sh weekly >> /logs/weekly/`date +%F_%H.%M.%S`.log 2>&1

@@ -1,1 +1,1 @@
-/script/runner.sh hourly >> /logs/cron.log 2>&1
+/script/runner.sh hourly >> /logs/hourly/`date +%F_%H.%M.%S`.log 2>&1
