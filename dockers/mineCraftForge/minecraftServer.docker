@@ -1,0 +1,3 @@
+FROM xannosz/java17:latest
+COPY ./minecraft /minecraft
+CMD cd /minecraft/map && ./run.sh

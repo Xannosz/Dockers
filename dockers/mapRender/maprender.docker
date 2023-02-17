@@ -1,6 +1,6 @@
 FROM mide/minecraft-overviewer:latest
 
-ENV MINECRAFT_VERSION="1.16.5"
+ENV MINECRAFT_VERSION="1.19.2"
 
 COPY ./config/config.py /home/minecraft/config.py
 

@@ -1,7 +1,16 @@
-echo ""
+#!/bin/bash
+
 echo "############################"
 echo "#### `date` ####"
 echo "#### run $1 scripts ####"
+echo "############################"
+
+while read assignment; do
+  export "$assignment"
+done < /script/env.txt
+
+env
+
 echo "############################"
 
 for folder in `ls /content`
